@@ -1,0 +1,243 @@
+{
+  "project": {
+    "name": "Diagnóstico Empresarial",
+    "type": "landing-page",
+    "language": "pt-BR",
+    "responsive": true
+  },
+
+  "theme": {
+    "colors": {
+      "background": "#0E0E0E",
+      "surface": "#1A1A1A",
+      "primary": "#FF4D8D",
+      "primaryHover": "#E63B78",
+      "secondary": "#FFFFFF",
+      "textPrimary": "#FFFFFF",
+      "textSecondary": "#C7C7C7",
+      "accent": "#FFB3CB",
+      "border": "#2A2A2A"
+    },
+    "typography": {
+      "fontFamily": "Inter, sans-serif",
+      "headings": {
+        "h1": {
+          "fontSize": 48,
+          "fontWeight": 700,
+          "lineHeight": 1.2
+        },
+        "h2": {
+          "fontSize": 36,
+          "fontWeight": 600,
+          "lineHeight": 1.3
+        },
+        "h3": {
+          "fontSize": 24,
+          "fontWeight": 600
+        }
+      },
+      "body": {
+        "fontSize": 16,
+        "lineHeight": 1.6
+      }
+    },
+    "radius": {
+      "small": 8,
+      "medium": 12,
+      "large": 20,
+      "pill": 999
+    },
+    "spacing": {
+      "section": 96,
+      "container": 1200,
+      "gap": 24
+    }
+  },
+
+  "layout": {
+    "containerMaxWidth": 1200,
+    "grid": {
+      "columns": 12,
+      "gap": 24
+    }
+  },
+
+  "sections": [
+    {
+      "id": "hero",
+      "type": "hero",
+      "background": "dark",
+      "layout": "two-columns",
+      "content": {
+        "headline": "Crescimento empresarial não começa com ações isoladas.",
+        "highlight": "Começa com diagnóstico.",
+        "text": "Empresas que crescem com consistência sabem exatamente onde estão, o que precisa ser ajustado e quais decisões tomar.",
+        "cta": {
+          "label": "Solicitar diagnóstico",
+          "style": "primary"
+        },
+        "image": {
+          "type": "portrait",
+          "position": "right",
+          "style": "minimal"
+        }
+      }
+    },
+
+    {
+      "id": "problem",
+      "type": "content",
+      "background": "light",
+      "layout": "centered",
+      "content": {
+        "headline": "Você sente que sua empresa faz muito, mas avança pouco?",
+        "diagram": {
+          "type": "radial",
+          "centerText": "Falta de clareza",
+          "items": [
+            "Decisões sem direção",
+            "Retrabalho constante",
+            "Metas desconectadas",
+            "Falta de prioridade",
+            "Ações reativas"
+          ]
+        }
+      }
+    },
+
+    {
+      "id": "diagnostic",
+      "type": "content",
+      "background": "dark",
+      "layout": "two-columns",
+      "content": {
+        "headline": "O problema não é falta de tentativa.",
+        "highlight": "É falta de diagnóstico empresarial.",
+        "features": [
+          {
+            "icon": "check",
+            "title": "Visão estratégica",
+            "text": "Entenda exatamente onde estão os gargalos."
+          },
+          {
+            "icon": "check",
+            "title": "Direção clara",
+            "text": "Decisões alinhadas ao momento do negócio."
+          },
+          {
+            "icon": "check",
+            "title": "Prioridades corretas",
+            "text": "Foco no que realmente gera impacto."
+          }
+        ]
+      }
+    },
+
+    {
+      "id": "process",
+      "type": "steps",
+      "background": "light",
+      "layout": "vertical",
+      "content": {
+        "headline": "Diagnóstico empresarial antes de qualquer execução",
+        "steps": [
+          {
+            "title": "Análise do negócio",
+            "description": "Entendimento profundo da empresa e do mercado."
+          },
+          {
+            "title": "Mapeamento estratégico",
+            "description": "Identificação de gargalos e oportunidades."
+          },
+          {
+            "title": "Plano de ação",
+            "description": "Direcionamento claro para decisões futuras."
+          }
+        ]
+      }
+    },
+
+    {
+      "id": "decision",
+      "type": "content",
+      "background": "dark",
+      "layout": "two-columns",
+      "content": {
+        "headline": "O ponto de partida para decisões empresariais mais inteligentes",
+        "list": [
+          "Clareza estratégica",
+          "Redução de erros",
+          "Mais previsibilidade",
+          "Crescimento sustentável"
+        ],
+        "cta": {
+          "label": "Quero mais clareza",
+          "style": "primary"
+        }
+      }
+    },
+
+    {
+      "id": "why",
+      "type": "comparison",
+      "background": "dark",
+      "layout": "centered",
+      "content": {
+        "headline": "Por que empresários escolhem esse processo",
+        "items": [
+          "Decidem com dados, não achismo",
+          "Executam com mais segurança",
+          "Param de apagar incêndios",
+          "Ganham tempo e foco"
+        ]
+      }
+    },
+
+    {
+      "id": "faq",
+      "type": "faq",
+      "background": "dark",
+      "content": {
+        "headline": "Dúvidas frequentes",
+        "questions": [
+          {
+            "q": "Esse diagnóstico serve para qualquer empresa?",
+            "a": "Sim, o processo é adaptado ao momento e porte do negócio."
+          },
+          {
+            "q": "Preciso executar tudo depois?",
+            "a": "Não. O diagnóstico entrega clareza para você decidir os próximos passos."
+          }
+        ]
+      }
+    },
+
+    {
+      "id": "cta-final",
+      "type": "call-to-action",
+      "background": "light",
+      "content": {
+        "headline": "Clareza empresarial vem antes do crescimento.",
+        "cta": {
+          "label": "Falar com a Rosana",
+          "style": "primary"
+        }
+      }
+    }
+  ],
+
+  "responsiveRules": {
+    "mobile": {
+      "breakpoint": 768,
+      "layout": "single-column",
+      "heroImage": "below-text",
+      "fontScale": 0.9,
+      "spacing": 64
+    },
+    "tablet": {
+      "breakpoint": 1024,
+      "layout": "two-columns",
+      "fontScale": 0.95
+    }
+  }
+}
