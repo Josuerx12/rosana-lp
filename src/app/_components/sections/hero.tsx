@@ -4,23 +4,23 @@ import Image from "next/image";
 
 export const HeroSection = () => {
   return (
-    <section className="bg-background min-h-screen text-foreground relative overflow-hidden">
+    <section className="bg-background min-h-screen text-foreground relative overflow-hidden py-10 md:py-0">
       {/* Decorative elements */}
-      {/* <div className="absolute top-10 right-10 w-3 h-3 bg-primary rounded-full opacity-60" />
-      <div className="absolute top-32 right-24 w-2 h-2 bg-primary rounded-full opacity-40" />
-      <div className="absolute bottom-20 left-10 w-2 h-2 bg-primary rounded-full opacity-50" /> */}
+      <div className="absolute sm:hidden top-10 right-10 w-3 h-3 bg-primary rounded-full opacity-60" />
+      <div className="absolute sm:hidden top-32 right-24 w-2 h-2 bg-primary rounded-full opacity-40" />
+      <div className="absolute sm:hidden bottom-20 left-10 w-2 h-2 bg-primary rounded-full opacity-50" />
 
       <Image
         src={"/assets/fundo1.png"}
         alt="fundo1"
-        className="object-cover absolute top-0 shadow-none -left-37.5 sm:-left-45 md:-left-50 lg:-left-62.5 z-0"
+        className="object-cover hidden sm:block absolute top-0 shadow-none -left-37.5 sm:-left-45 md:-left-50 lg:-left-62.5 z-0"
         width={891}
         height={1337}
       />
       <Image
         src={"/assets/fundo2.png"}
         alt="fundo2"
-        className="object-cover absolute top-0 shadow-none -right-75 sm:-right-87.5 md:-right-100 lg:-right-75 z-0"
+        className="object-cover hidden sm:block absolute top-0 shadow-none -right-75 sm:-right-87.5 md:-right-100 lg:-right-75 z-0"
         width={891}
         height={1337}
       />
