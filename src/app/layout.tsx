@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Inter } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({
@@ -9,9 +9,10 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Rosana Miranda - Consultoria Empresarial",
+  title:
+    "Rosana Miranda – Consultoria Estratégica em Comunicação, Marketing e Vendas",
   description:
-    "Auditoria Estratégica Empresarial para crescimento consistente.",
+    "Diagnóstico estratégico em comunicação, marketing, conteúdo, gestão e vendas. Clareza, posicionamento e execução para destravar o crescimento do seu negócio.",
 };
 
 export default function RootLayout({

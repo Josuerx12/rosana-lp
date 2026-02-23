@@ -1,74 +1,78 @@
-/** biome-ignore-all lint/suspicious/noArrayIndexKey: <explanation> */
-/** biome-ignore-all lint/suspicious/noShadowRestrictedNames: <explanation> */
-import { FileSearch, Map, Rocket } from "lucide-react";
+/** biome-ignore-all lint/suspicious/noArrayIndexKey: array index is safe as list is static */
 import { Section } from "../ui/section";
 
 const steps = [
   {
-    number: "1",
-    icon: FileSearch,
-    title: "Análise do negócio",
-    description: "Entendimento profundo da empresa e do mercado.",
+    number: "01",
+    title: "Diagnóstico do momento atual",
+    description:
+      "Leitura completa do cenário, gargalos e posição atual do negócio.",
   },
   {
-    number: "2",
-    icon: Map,
-    title: "Mapeamento estratégico",
-    description: "Identificação de gargalos e oportunidades.",
+    number: "02",
+    title: "Definição de posicionamento e prioridades",
+    description:
+      "Clareza sobre o que precisa ser ajustado e o que vem primeiro.",
   },
   {
-    number: "3",
-    icon: Rocket,
-    title: "Plano de ação",
-    description: "Direcionamento claro para decisões futuras.",
+    number: "03",
+    title: "Estratégia de comunicação e conteúdo",
+    description: "Direção de mensagem, canais e conteúdo com intenção.",
+  },
+  {
+    number: "04",
+    title: "Ajuste de marketing e geração de demanda",
+    description:
+      "Marketing alinhado ao objetivo do negócio, com campanha e direção.",
+  },
+  {
+    number: "05",
+    title: "Organização de vendas e rotina comercial",
+    description: "Funil estruturado, rotina definida e processo escalável.",
+  },
+  {
+    number: "06",
+    title: "Plano de ação e acompanhamento por metas",
+    description:
+      "Prioridades claras, metas definidas e acompanhamento contínuo.",
   },
 ];
 
 export const ProcessSection = () => {
   return (
-    <Section background="light">
-      <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
-        {/* Left content */}
-        <div>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 leading-tight text-section-light-foreground">
-            Diagnóstico empresarial antes de{" "}
-            <span className="text-primary">qualquer execução</span>
-          </h2>
-          <p className="text-muted-foreground">
-            Um processo estruturado para você tomar decisões com clareza.
-          </p>
-        </div>
-
-        {/* Right steps */}
-        <div className="space-y-8">
-          {steps.map((step, index) => (
-            <div key={index} className="flex gap-6 relative">
-              {/* Vertical line connector */}
-              {index < steps.length - 1 && (
-                <div className="absolute left-6 top-14 w-0.5 h-16 bg-border" />
-              )}
-
-              {/* Step number circle */}
-              <div className="shrink-0 w-12 h-12 rounded-full bg-background border-2 border-primary flex items-center justify-center z-10">
-                <span className="text-primary font-bold">{step.number}</span>
-              </div>
-
-              {/* Step content */}
-              <div className="flex-1 pt-1">
-                <div className="flex items-center gap-3 mb-2">
-                  <step.icon className="w-5 h-5 text-primary" />
-                  <h3 className="font-semibold text-lg text-section-light-foreground">
-                    {step.title}
-                  </h3>
-                </div>
-                <p className="text-muted-foreground text-sm">
-                  {step.description}
-                </p>
-              </div>
-            </div>
-          ))}
-        </div>
+    <Section id="metodo" background="light">
+      <div className="text-center max-w-2xl mx-auto mb-12 md:mb-16">
+        <p className="text-primary text-sm font-medium uppercase tracking-wider mb-3">
+          MÉTODO DE TRABALHO
+        </p>
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 leading-tight text-section-light-foreground">
+          Meu trabalho segue um{" "}
+          <span className="text-primary">processo claro e aplicável</span>
+        </h2>
       </div>
+
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto mb-10">
+        {steps.map((step, index) => (
+          <div
+            key={index}
+            className="relative p-6 rounded-2xl bg-background border border-border hover:border-primary/30 transition-colors group"
+          >
+            <span className="block text-3xl font-black text-primary/20 mb-3 group-hover:text-primary/40 transition-colors">
+              {step.number}
+            </span>
+            <h3 className="font-bold text-section-light-foreground mb-2 leading-snug">
+              {step.title}
+            </h3>
+            <p className="text-sm text-muted-foreground leading-relaxed">
+              {step.description}
+            </p>
+          </div>
+        ))}
+      </div>
+
+      <p className="text-center font-semibold text-primary text-lg">
+        Clareza primeiro. Execução depois. Ajuste contínuo.
+      </p>
     </Section>
   );
 };

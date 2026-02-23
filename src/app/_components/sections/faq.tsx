@@ -1,38 +1,61 @@
-/** biome-ignore-all lint/suspicious/noArrayIndexKey: <explanation> */
-/** biome-ignore-all lint/a11y/useButtonType: <explanation> */
+/** biome-ignore-all lint/suspicious/noArrayIndexKey: array index is safe as list is static */
+/** biome-ignore-all lint/a11y/useButtonType: toggle button does not submit form */
 
 "use client";
 
 import { useState } from "react";
-import { ChevronDown, Plus } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 import { Section } from "../ui/section";
 import { AnimatePresence, motion } from "framer-motion";
 
 const faqs = [
   {
-    question: "O multisetor estratégico empresarial tem custo?",
+    question: "Este diagnóstico serve para qual tipo de negócio?",
     answer:
-      "Sim, o processo tem um investimento que varia conforme a complexidade do negócio. Entre em contato para saber mais.",
+      "Para empresas e profissionais que precisam organizar comunicação, marketing e vendas para crescer com mais consistência.",
   },
   {
-    question: "Quanto tempo leva para realizar o diagnóstico?",
+    question: "Quanto tempo leva o diagnóstico?",
     answer:
-      "O processo completo leva em média de 2 a 4 semanas, dependendo do tamanho e complexidade da empresa.",
+      "O prazo depende do nível de complexidade, e é informado após o primeiro alinhamento.",
   },
   {
-    question: "É necessário ter redes sociais ativas?",
+    question: "O diagnóstico inclui plano de ação?",
     answer:
-      "Não necessariamente. O diagnóstico avalia todos os aspectos do negócio, não apenas presença digital.",
+      "Sim. A devolutiva entrega prioridades e direcionamento prático para execução.",
   },
   {
-    question: "Vocês atendem empresas de qualquer parte?",
+    question: "Vocês também executam ou apenas orientam?",
     answer:
-      "Sim, atendemos empresas de todo o Brasil de forma remota ou presencial conforme a necessidade.",
+      "A execução pode ser avaliada após o diagnóstico, conforme necessidade do projeto.",
   },
   {
-    question: "Existe obrigação após o diagnóstico?",
+    question: "Quanto custa o diagnóstico?",
     answer:
-      "Não. O diagnóstico entrega clareza para você decidir os próximos passos. A decisão é sempre sua.",
+      "O valor é informado após entendermos escopo, complexidade e objetivo.",
+  },
+  {
+    question: "Preciso ter redes sociais ativas?",
+    answer:
+      "Não. O diagnóstico define o que faz sentido para o momento do negócio, inclusive presença digital.",
+  },
+  {
+    question: "Como são medidos os resultados?",
+    answer:
+      "Por metas e indicadores alinhados ao objetivo: demanda, conversão, eficiência comercial e consistência de comunicação.",
+  },
+  {
+    question: "Atende presencial ou remoto?",
+    answer:
+      "Atendimento remoto e presencial, conforme disponibilidade e região.",
+  },
+  {
+    question: "Existe contrato de continuidade obrigatório?",
+    answer: "Não. O diagnóstico é uma etapa independente.",
+  },
+  {
+    question: "Como solicitar?",
+    answer: "Pelo WhatsApp ou formulário de contato abaixo.",
   },
 ];
 
@@ -48,14 +71,19 @@ export const FAQSection = () => {
   }
 
   return (
-    <Section background="dark">
+    <Section id="faq" background="dark">
       <div className="grid lg:grid-cols-3 gap-8 lg:gap-12">
         {/* Left title */}
         <div>
           <p className="text-primary text-sm font-medium uppercase tracking-wider mb-2">
             FAQ
           </p>
-          <h2 className="text-2xl sm:text-3xl font-bold">Dúvidas frequentes</h2>
+          <h2 className="text-2xl sm:text-3xl font-bold">
+            Perguntas frequentes
+          </h2>
+          <p className="text-muted-foreground text-sm mt-3">
+            Dúvidas comuns sobre o diagnóstico e o processo de trabalho.
+          </p>
         </div>
 
         {/* Right FAQ items */}
@@ -73,7 +101,7 @@ export const FAQSection = () => {
                   {openIndex === index ? "–" : "+"} {faq.question}
                 </span>
                 <ChevronDown
-                  className={`w-5 h-5 text-primary transition-transform flex-shrink-0 ${
+                  className={`w-5 h-5 text-primary transition-transform shrink-0 ${
                     openIndex === index ? "rotate-180" : ""
                   }`}
                 />

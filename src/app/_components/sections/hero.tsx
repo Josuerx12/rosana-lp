@@ -4,7 +4,10 @@ import Image from "next/image";
 
 export const HeroSection = () => {
   return (
-    <section className="bg-background min-h-screen text-foreground relative overflow-hidden py-10 md:py-0">
+    <section
+      id="hero"
+      className="bg-background md:min-h-screen text-foreground relative overflow-hidden py-10 lg:py-0"
+    >
       {/* Decorative elements */}
       <div className="absolute sm:hidden top-10 right-10 w-3 h-3 bg-primary rounded-full opacity-60" />
       <div className="absolute sm:hidden top-32 right-24 w-2 h-2 bg-primary rounded-full opacity-40" />
@@ -13,24 +16,38 @@ export const HeroSection = () => {
       <Image
         src={"/assets/fundo1.png"}
         alt="fundo1"
-        className="object-cover hidden sm:block absolute top-0 shadow-none -left-37.5 sm:-left-45 md:-left-50 lg:-left-62.5 z-0"
+        className="object-cover hidden lg:block absolute top-0 shadow-none -left-37.5 sm:-left-45 md:-left-50 lg:-left-62.5 z-0"
         width={891}
         height={1337}
       />
       <Image
         src={"/assets/fundo2.png"}
         alt="fundo2"
-        className="object-cover hidden sm:block absolute top-0 shadow-none -right-75 sm:-right-87.5 md:-right-100 lg:-right-75 z-0"
+        className="object-cover hidden lg:block absolute top-0 shadow-none -right-75 sm:-right-87.5 md:-right-100 lg:-right-75 z-0"
         width={891}
         height={1337}
       />
       {/* Separador central para suavizar a junção das imagens */}
       <div className="absolute inset-0 bg-linear-to-r from-transparent via-background to-transparent pointer-events-none z-10" />
 
-      <Container className="relative z-20 pt-8 md:pt-10 lg:pt-16">
+      {/* Hero portrait – absolutely pinned to bottom-right, in front of everything */}
+      <div
+        className="absolute bottom-0 right-0  xl:right-30 hidden lg:block z-40 w-[52%] max-w-160 pointer-events-none select-none"
+        style={{ filter: "drop-shadow(-18px 0 40px rgba(0,0,0,0.38))" }}
+      >
+        <Image
+          src="/assets/hero-portrait.png"
+          alt="Rosana Leite - Consultora Empresarial"
+          width={832}
+          height={984}
+          className="w-full h-auto object-contain object-bottom shadow-none"
+        />
+      </div>
+
+      <Container className="relative z-20 pt-8 md:pt-10 lg:pt-16 pb-16 lg:pb-24">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left content */}
-          <div className="order-2 lg:order-1">
+          <div>
             {/* Brand name */}
             <Image
               src={"/assets/logo.png"}
@@ -40,31 +57,35 @@ export const HeroSection = () => {
               alt="Logomarca"
             />
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.75rem] font-bold leading-[1.2] mb-5 md:mb-8 lg:mb-10">
-              Crescimento empresarial não começa com ações isoladas.
-              <br />
-              <span className="text-primary">Começa com diagnóstico.</span>
+              Consultoria estratégica em comunicação, marketing e vendas para
+              quem precisa de{" "}
+              <span className="text-primary">direção, não de tentativas</span>
             </h1>
 
-            <p className="text-muted-foreground text-sm md:text-base mb-6 max-w-lg leading-relaxed">
-              Empresas que crescem com consistência sabem exatamente onde estão,
-              o que precisa ser ajustado e quais decisões tomar.
+            <p className="text-muted-foreground text-sm md:text-base mb-4 max-w-lg leading-relaxed">
+              Diagnóstico empresarial com foco em clareza, posicionamento e
+              execução. Comunicação, conteúdo, gestão e vendas trabalhando de
+              forma integrada para destravar crescimento com consistência.
             </p>
 
-            <Button variant="primary">Solicitar diagnóstico</Button>
+            <p className="text-muted-foreground/70 text-xs md:text-sm mb-8 max-w-lg leading-relaxed">
+              Diagnóstico estratégico, consultoria de marketing, posicionamento
+              de marca, estratégia de conteúdo, gestão comercial e vendas.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-3">
+              <Button variant="primary">
+                Solicitar diagnóstico estratégico
+              </Button>
+
+              <a href={"#metodo"} className="w-max">
+                <Button variant="outline">Conhecer o método de trabalho</Button>
+              </a>
+            </div>
           </div>
 
-          {/* Right image */}
-          <div className="order-1 lg:order-2 flex justify-center lg:justify-end relative z-30">
-            <Image
-              src="/assets/hero-portrait.png"
-              alt="Rosana Leite - Consultora Empresarial"
-              width={832}
-              height={984}
-              className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl rounded-2xl object-cover shadow-none"
-            />
-            {/* Decorative pink circle */}
-            <div className="absolute -bottom-4 -right-4 w-8 h-8 bg-primary rounded-full opacity-80" />
-          </div>
+          {/* Spacer – keeps left content from stretching full width */}
+          <div className="hidden lg:block" />
         </div>
       </Container>
     </section>
