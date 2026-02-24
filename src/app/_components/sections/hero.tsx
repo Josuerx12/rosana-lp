@@ -6,7 +6,7 @@ export const HeroSection = () => {
   return (
     <section
       id="hero"
-      className="bg-background md:min-h-screen text-foreground relative overflow-hidden py-10 lg:py-0"
+      className="bg-background text-foreground relative overflow-hidden py-10 lg:py-0"
     >
       {/* Decorative elements */}
       <div className="absolute sm:hidden top-10 right-10 w-3 h-3 bg-primary rounded-full opacity-60" />
@@ -74,12 +74,10 @@ export const HeroSection = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3">
-              <Button variant="primary">
-                Solicitar diagnóstico estratégico
-              </Button>
+              <Button variant="primary">Solicitar diagnóstico</Button>
 
               <a href={"#metodo"} className="w-max">
-                <Button variant="outline">Conhecer o método de trabalho</Button>
+                <Button variant="outline">Conhecer o método</Button>
               </a>
             </div>
           </div>

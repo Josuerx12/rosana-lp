@@ -57,10 +57,10 @@ export const ProcessSection = () => {
             key={index}
             className="relative p-6 rounded-2xl bg-background border border-border hover:border-primary/30 transition-colors group"
           >
-            <span className="block text-3xl font-black text-primary/20 mb-3 group-hover:text-primary/40 transition-colors">
+            <span className="block text-3xl font-black text-primary/60 mb-3 group-hover:text-primary/80 transition-colors">
               {step.number}
             </span>
-            <h3 className="font-bold text-section-light-foreground mb-2 leading-snug">
+            <h3 className="font-bold text-foreground mb-2 leading-snug">
               {step.title}
             </h3>
             <p className="text-sm text-muted-foreground leading-relaxed">

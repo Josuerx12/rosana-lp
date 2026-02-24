@@ -43,7 +43,7 @@ export const ProblemSection = () => {
             <div className="shrink-0 mt-0.5">
               <XCircle className="w-5 h-5 text-primary opacity-70" />
             </div>
-            <span className="text-sm font-medium text-section-light-foreground leading-snug">
+            <span className="text-sm font-medium text-muted-foreground leading-snug">
               {problem}
             </span>
           </div>
