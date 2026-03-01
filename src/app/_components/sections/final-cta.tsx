@@ -1,4 +1,5 @@
 import { Button } from "../ui/button";
+import RequestDiagnosticButton from "../ui/request-diagnostic-button";
 
 export const FinalCTASection = () => {
   return (
@@ -25,9 +26,10 @@ export const FinalCTASection = () => {
             É entender o que realmente precisa ser feito.
           </p>
 
-          <Button variant="primary" className="text-lg px-10 py-4">
-            Solicitar diagnóstico estratégico agora
-          </Button>
+          <RequestDiagnosticButton
+            text="Solicitar diagnóstico estratégico agora"
+            className="text-lg px-10 py-4"
+          />
         </div>
       </div>
     </section>

@@ -3,6 +3,7 @@
 import { Clock, DollarSign, Users } from "lucide-react";
 import { Button } from "../ui/button";
 import { Section } from "../ui/section";
+import RequestDiagnosticButton from "../ui/request-diagnostic-button";
 
 const risks = [
   {
@@ -63,9 +64,7 @@ export const DiagnosticSection = () => {
             </span>
           </p>
         </div>
-        <Button variant="primary">
-          Solicitar diagnóstico estratégico agora
-        </Button>
+        <RequestDiagnosticButton text="Solicitar diagnóstico estratégico agora" />
       </div>
     </Section>
   );

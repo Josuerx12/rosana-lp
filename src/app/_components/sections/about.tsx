@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Button } from "../ui/button";
 import { Section } from "../ui/section";
+import RequestDiagnosticButton from "../ui/request-diagnostic-button";
 
 export const AboutSection = () => {
   return (
@@ -25,7 +26,8 @@ export const AboutSection = () => {
             ser ajustado, priorizado e executado para que o negócio avance com
             consistência.
           </p>
-          <Button variant="primary">Solicitar diagnóstico estratégico</Button>
+
+          <RequestDiagnosticButton text="Solicitar diagnóstico estratégico" />
         </div>
 
         {/* Right image */}

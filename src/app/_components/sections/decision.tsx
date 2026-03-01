@@ -2,6 +2,7 @@
 import { Check } from "lucide-react";
 import { Button } from "../ui/button";
 import { Section } from "../ui/section";
+import RequestDiagnosticButton from "../ui/request-diagnostic-button";
 
 const deliverables = [
   "Leitura completa do cenário e gargalos",
@@ -48,9 +49,10 @@ export const DecisionSection = () => {
           <p className="text-sm text-muted-foreground mb-6">
             Formato: análise + devolutiva estratégica
           </p>
-          <Button variant="primary" className="w-full justify-center">
-            Solicitar diagnóstico estratégico
-          </Button>
+          <RequestDiagnosticButton
+            text="Solicitar diagnóstico estratégico agora"
+            className="w-full justify-center"
+          />
         </div>
       </div>
     </Section>

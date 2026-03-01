@@ -291,7 +291,7 @@ export const ContactSection = () => {
           {/* WhatsApp button */}
           <div className="mt-8 text-center">
             <a
-              href="https://wa.me/5500000000000"
+              href="https://wa.me/5522998510161"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-3 px-10 py-4 font-bold text-lg rounded-full bg-[#25D366] text-white hover:bg-[#1ebe5b] transition-all duration-300 shadow-lg hover:shadow-xl"

@@ -1,6 +1,8 @@
 import { Container } from "../ui/container";
 import { Button } from "../ui/button";
 import Image from "next/image";
+import KnowMethodButton from "../ui/know-method-button";
+import RequestDiagnosticButton from "../ui/request-diagnostic-button";
 
 export const HeroSection = () => {
   return (
@@ -30,24 +32,10 @@ export const HeroSection = () => {
       {/* Separador central para suavizar a junção das imagens */}
       <div className="absolute inset-0 bg-linear-to-r from-transparent via-background to-transparent pointer-events-none z-10" />
 
-      {/* Hero portrait – absolutely pinned to bottom-right, in front of everything */}
-      <div
-        className="absolute bottom-0 right-0  xl:right-30 hidden lg:block z-40 w-[52%] max-w-160 pointer-events-none select-none"
-        style={{ filter: "drop-shadow(-18px 0 40px rgba(0,0,0,0.38))" }}
-      >
-        <Image
-          src="/assets/hero-portrait.png"
-          alt="Rosana Leite - Consultora Empresarial"
-          width={832}
-          height={984}
-          className="w-full h-auto object-contain object-bottom shadow-none"
-        />
-      </div>
-
-      <Container className="relative z-20 pt-8 md:pt-10 lg:pt-16 pb-16 lg:pb-24">
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+      <Container className="relative z-20 pt-8 md:pt-10 lg:pt-16 pb-16 lg:pb-0">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
           {/* Left content */}
-          <div>
+          <div className="flex flex-col justify-center">
             {/* Brand name */}
             <Image
               src={"/assets/logo.png"}
@@ -73,17 +61,28 @@ export const HeroSection = () => {
               de marca, estratégia de conteúdo, gestão comercial e vendas.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-3">
-              <Button variant="primary">Solicitar diagnóstico</Button>
+            <div className="flex flex-col sm:flex-row gap-3 ">
+              <RequestDiagnosticButton />
 
-              <a href={"#metodo"} className="w-max">
-                <Button variant="outline">Conhecer o método</Button>
-              </a>
+              <KnowMethodButton />
             </div>
+            <br />
+            <br />
           </div>
 
-          {/* Spacer – keeps left content from stretching full width */}
-          <div className="hidden lg:block" />
+          {/* Hero portrait – inside container, anchored to section bottom */}
+          <div
+            className="hidden lg:flex items-end justify-end pointer-events-none select-none"
+            style={{ filter: "drop-shadow(-18px 0 40px rgba(0,0,0,0.38))" }}
+          >
+            <Image
+              src="/assets/hero-portrait.png"
+              alt="Rosana Leite - Consultora Empresarial"
+              width={832}
+              height={984}
+              className="w-full h-auto max-w-[520px] object-contain object-bottom shadow-none"
+            />
+          </div>
         </div>
       </Container>
     </section>
