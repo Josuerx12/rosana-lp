@@ -22,6 +22,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
+      <head>
+        <meta
+          name="facebook-domain-verification"
+          content="avgd9zj7yo53laiq8ao64xw1c797kx"
+        />
+      </head>
       <body className={`${inter.variable} antialiased`}>{children}</body>
     </html>
   );
